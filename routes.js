@@ -20,7 +20,6 @@ const routeHandler = (request, response) => {
 
     else if (request.url == "/create" && request.method == "POST") {
         const data = [];
-
         request.on("data", (chunk) => {
             data.push(chunk);
         });
