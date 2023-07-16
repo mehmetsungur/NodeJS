@@ -18,14 +18,12 @@ var server = http.createServer((request, response) => {
     }
     else {
         fs.readFile("404.html", (error, html) => {
-            response.writeHead(200, { "Content-Type": "text/html" });
+            response.writeHead(404, { "Content-Type": "text/html" });
             response.write(html);
             response.end();
         });
     }
 });
 
-
 server.listen(3000);
-
 console.log("node.js server at port 3000");
